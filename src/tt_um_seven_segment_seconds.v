@@ -12,8 +12,9 @@ module tt_um_seven_segment_seconds #( parameter MAX_COUNT = 10_000_000 ) (
 );
 
     wire reset = ! rst_n;
-    wire [6:0] led_out;
-    assign uo_out[6:0] = led_out;
+    wire [7:0] led_out;
+    assign uo_out[7:0] = led_out;
+    
 
     // use bidirectionals as outputs
     assign uio_oe = 8'b11111111;
